@@ -1,5 +1,13 @@
 package guitar_text_notation
 
+/* SPIKE: evaluate the prattle PRAT parser.
+
+I think it could do the job at the parser level. I'd have to build my own
+driver to handle each of the tokens, and it's not clear what the precedence does
+in the context of parsing song lines.
+
+*/
+
 import (
 	"fmt"
 	"strconv"
@@ -67,13 +75,21 @@ func (d *driver) add(p *prattle.Parser, t prattle.Token) error {
 }
 
 func (d *driver) Prefix(kind int) prattle.ParseFunc {
-	return d.number
+	if kind == 2 {
+		return d.number
+	}
+	return nil
 }
 
 func (d *driver) Infix(kind int) prattle.ParseFunc {
-	return d.add
+	if kind == 1 {
+		return d.add
+	}
+	return nil
 }
 
+// Precedence makes numbers (token 2) bind more tightly than
+// the plus operator
 func (d *driver) Precedence(kind int) int {
 	return kind
 }
