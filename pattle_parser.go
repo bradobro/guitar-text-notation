@@ -57,24 +57,27 @@ func (d *driver) pop() (i int) {
 }
 
 func (d *driver) number(p *prattle.Parser, t prattle.Token) error {
+	fmt.Printf("number(%s, %d) ", t.Text, t.Kind)
 	n, _ := strconv.Atoi(t.Text)
 	d.push(n)
 	return nil
 }
 
 func (d *driver) add(p *prattle.Parser, t prattle.Token) error {
+	fmt.Printf("add(%s, %d) ", t.Text, t.Kind)
 	// Parse the right hand operator.
 	_ = p.Parse(d.Precedence(t.Kind))
 
 	right := d.pop()
 	left := d.pop()
 	sum := left + right
-	fmt.Printf("%d + %d = %d\n", left, right, sum)
+	fmt.Printf("\n%d + %d = %d\n", left, right, sum)
 	d.push(sum)
 	return nil
 }
 
 func (d *driver) Prefix(kind int) prattle.ParseFunc {
+	fmt.Printf("Prefix(%d) ", kind)
 	if kind == 2 {
 		return d.number
 	}
@@ -82,6 +85,7 @@ func (d *driver) Prefix(kind int) prattle.ParseFunc {
 }
 
 func (d *driver) Infix(kind int) prattle.ParseFunc {
+	fmt.Printf("Infix(%d) ", kind)
 	if kind == 1 {
 		return d.add
 	}
@@ -91,6 +95,7 @@ func (d *driver) Infix(kind int) prattle.ParseFunc {
 // Precedence makes numbers (token 2) bind more tightly than
 // the plus operator
 func (d *driver) Precedence(kind int) int {
+	fmt.Printf("Precedence(%d) ", kind)
 	return kind
 }
 
