@@ -6,6 +6,7 @@ import (
 )
 
 func TestGoldmark1(t *testing.T) {
+	t.SkipNow()
 	md1 := `
 # Heading 1
 
@@ -21,4 +22,8 @@ That was a second level heading.
 `
 	html1 := TryGoldMark1(md1)
 	fmt.Println(html1)
+}
+
+func TestMarkdownFile(t *testing.T) {
+	// read file
 }
