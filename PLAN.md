@@ -10,6 +10,16 @@ A few libs:
 - [goldmark](https://github.com/yuin/goldmark) Markdown parser
 - [goparsec](https://github.com/prataprc/goparsec) a parser combinator. Google AI says this can be less performant for large inputs and it can struggle with operator precedence (see prattle for that).
 - [Nearly](https://github.com/kach/nearley) is a JavaScript BNF compiler with some great docs and theory. It can compile to TypeScript too.
+- This [Go ChordPro Parser](https://github.com/mmbros/chordpro) uses Rob Pike's parsing methodology. [Muckbucket's Processor](https://github.com/muckbucket/chordpro) may also be instructive
+
+- [LALR Theory](https://web.archive.org/web/20210507215636/http://web.cs.dal.ca:80/~sjackson/lalr1.html)
+- Other work (search GitHub for *guitar notation*)
+    - [alphaTab](https://github.com/CoderLine/alphaTab) another take on horizontally describing guitar tab, and [the docs page](https://www.alphatab.net/).
+    - [jTab](https://jtab.tardate.com/) mostly a means of describing chords
+    - [note2tab](https://github.com/mrclksr/note2tab) older c program with kind of janky notation
+    - [SawNote](https://github.com/xsawyerx/sawnotr) a fairly straightforward text to tab format with a Perl implementation.
+    - [Tulip](https://github.com/rafael-santiago/tulip) another take on textual notation based on a 1966a book by Fernando Azevedo (Brazillian). One unique aspect is using *places* to denote string and fret (e.g. `12` is first string second fret).
+    - [NoodleTab](https://github.com/jrd730/NoodleTab) is a textual fret notation that's pretty compact and converts to tablature in JavaScript. Includes a PEG grammar.
 
 With all of these, the hardest thing is figuring out the docs. Good examples are a bonus.
 

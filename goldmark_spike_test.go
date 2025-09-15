@@ -3,7 +3,12 @@ package guitar_text_notation
 import (
 	"fmt"
 	"testing"
+
+	"github.com/davecgh/go-spew/spew"
+	"github.com/yassinebenaid/godump"
 )
+
+const BETTER_WORD = "_testdata/better-word.md"
 
 func TestGoldmark1(t *testing.T) {
 	t.SkipNow()
@@ -20,10 +25,22 @@ This is paragraph 1. It's followed by a list:
 
 That was a second level heading.
 `
-	html1 := TryGoldMark1(md1)
+	html1 := MdToHtml(md1)
 	fmt.Println(html1)
 }
 
 func TestMarkdownFile(t *testing.T) {
-	// read file
+	t.SkipNow()
+	html1 := MdFileToHtml(BETTER_WORD)
+	fmt.Println(html1)
+}
+
+func TestSpikeAST(t *testing.T) {
+	simple := false
+	ast := MdFileToAST(BETTER_WORD)
+	if simple {
+		godump.Dump(ast)
+	} else {
+		spew.Dump(ast)
+	}
 }
