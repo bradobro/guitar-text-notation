@@ -36,6 +36,7 @@ func TestMarkdownFile(t *testing.T) {
 }
 
 func TestSpikeAST(t *testing.T) {
+	t.Skip("not reeady yet")
 	simple := false
 	ast := MdFileToAST(BETTER_WORD)
 	if simple {

@@ -8,3 +8,8 @@ require (
 	github.com/yassinebenaid/godump v0.11.1
 	github.com/yuin/goldmark v1.7.13
 )
+
+require (
+	github.com/mmbros/chordpro v0.0.0-20210426193821-cbe97a338584 // indirect
+	github.com/mmbros/simpleflag v0.0.0-20210421210957-9dc57b6f805d // indirect
+)

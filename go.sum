@@ -2,6 +2,10 @@ github.com/askeladdk/prattle v1.0.0 h1:B/uIYnHu7FVKfb4JbDMKl4pVk1uGz0OE9UPsMfsLS
 github.com/askeladdk/prattle v1.0.0/go.mod h1:lOKKz//Zm7KEm+kRp40bfLw4acggc80sI7EfxNZ+yJg=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/mmbros/chordpro v0.0.0-20210426193821-cbe97a338584 h1:zOlbgkW/CZ4sc7dhBh3xPJEVAcbReWJRS3IfcPlY/uo=
+github.com/mmbros/chordpro v0.0.0-20210426193821-cbe97a338584/go.mod h1:q7erbrY2QE7C7VrSQXFuYwgn9nBm/8bl1fGdeWcYXe8=
+github.com/mmbros/simpleflag v0.0.0-20210421210957-9dc57b6f805d h1:TA+iR3ePCN2unb6/BEWAAoS3T9PKA/NTbu4abCMFTwY=
+github.com/mmbros/simpleflag v0.0.0-20210421210957-9dc57b6f805d/go.mod h1:mlhPJFBxcFf/2+2dbI060iiiQfTErUCmwnL9ysJhk6I=
 github.com/yassinebenaid/godump v0.11.1 h1:SPujx/XaYqGDfmNh7JI3dOyCUVrG0bG2duhO3Eh2EhI=
 github.com/yassinebenaid/godump v0.11.1/go.mod h1:dc/0w8wmg6kVIvNGAzbKH1Oa54dXQx8SNKh4dPRyW44=
 github.com/yuin/goldmark v1.7.13 h1:GPddIs617DnBLFFVJFgpo1aBfe/4xcvMc3SB5t/D0pA=
