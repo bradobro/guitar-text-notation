@@ -28,7 +28,7 @@ func (lt LineType) String() string {
 		return "EOF"
 	case LineTypeBlank:
 		return "Blank"
-	case LineTypeMusic:
+	case LineTypeMusic: // lyrics, chords, and musical notes
 		return "Music"
 	case LineTypeDirective:
 		return "Directive"
