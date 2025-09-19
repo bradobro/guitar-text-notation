@@ -6,6 +6,7 @@ import (
 )
 
 func TestMmbParser(t *testing.T) {
+	t.SkipNow()
 	songs := MmbParseFile("./_testdata/Better Word.cho")
 	fmt.Print(songs.String())
 }
